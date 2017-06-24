@@ -2,7 +2,6 @@
 
 require_once("LoggedFileDB.php");
 require_once("LogRecord.php");
-require_once("Record.php");
 require_once("Util.php");
 
 class LoggedJsonDB implements LoggedFileDB{

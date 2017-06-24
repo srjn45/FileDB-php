@@ -1,7 +1,6 @@
 <?php
 
 require_once("FileDB.php");
-require_once("Record.php");
 require_once("Util.php");
 
 class JsonDB implements FileDB{
