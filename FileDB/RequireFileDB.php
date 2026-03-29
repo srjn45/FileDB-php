@@ -3,7 +3,8 @@
 require_once("Util.php");
 
 require_once("Secure.php");
-require_once("McryptSecure.php");
+require_once("McryptSecure.php");    // kept for legacy data migration only
+require_once("OpenSSLSecure.php");
 
 require_once("FileDB.php");
 require_once("LoggedFileDB.php");

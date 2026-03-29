@@ -8,7 +8,7 @@ class BasicSecureRecord extends BasicRecord implements SecureRecord {
 	protected $secure;
 
 	public function __construct(){
-		$this->secure = "McryptSecure";
+		$this->secure = "OpenSSLSecure";
 	}
 
 	function getSecure(){

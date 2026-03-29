@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/srajan/Development/FileDBv2/**)",
+      "Bash(go mod:*)",
+      "Bash(go get:*)",
+      "Bash(protoc --version)",
+      "Bash(buf --version)",
+      "Bash(go install:*)",
+      "Bash(sudo apt-get:*)",
+      "Bash(curl -sSL \"https://github.com/bufbuild/buf/releases/latest/download/buf-Linux-x86_64\" -o /tmp/buf)",
+      "Bash(chmod +x /tmp/buf)",
+      "Bash(/tmp/buf --version)",
+      "Bash(/tmp/buf dep:*)",
+      "Bash(/tmp/buf generate:*)",
+      "Bash(go build:*)",
+      "Bash(go test:*)"
+    ],
+    "additionalDirectories": [
+      "/home/srajan/Development/FileDBv2"
+    ]
+  }
+}

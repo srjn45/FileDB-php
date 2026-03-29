@@ -40,12 +40,16 @@ class LoggedJsonDB implements LoggedFileDB{
 		$this->logRecord = $logRecord;
 	}
 
-	public function getRecords() {
+	public function getRecords(callable $filter = null, int $limit = 0, int $offset = 0) {
 		if(self::$LOG_GET_RECORD){
 			$this->logRecord->setOperation(self::$GET_RECORD);
 			$this->logFile->addRecord($this->logRecord);
 		}
-		return $this->mainFile->getRecords();
+		return $this->mainFile->getRecords($filter, $limit, $offset);
+	}
+
+	public function restore($id): bool {
+		return $this->mainFile->restore($id);
 	}
 
 	public function getParsedRecords($className){

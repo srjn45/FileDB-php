@@ -7,6 +7,7 @@ class BasicRecord implements Record {
 	public $id;
 	public $dateAdded;
 	public $dateModified;
+	public $deletedAt = null;
 
 	public function getId(){
 		return $this->id;
@@ -30,6 +31,14 @@ class BasicRecord implements Record {
 
 	function setDateModified($dateModified){
 		$this->dateModified = $dateModified;
+	}
+
+	public function getDeletedAt() {
+		return $this->deletedAt;
+	}
+
+	public function setDeletedAt($deletedAt) {
+		$this->deletedAt = $deletedAt;
 	}
 
 	public function __toString() {
